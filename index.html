@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vijay Papers</title>
-  </head>
-  <body>
-    <h1> Page under contruction </h1>
-  </body>
+<head>
+	<title>Vijay Papers</title>
+	<style type="text/css">
+		* {
+		  	margin: 0;
+		  	padding: 0;
+		  	border: none;
+		}
+		html, body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-family: 'Fira Sans', sans-serif;
+			background: #edecec;
+		}
+		.container {
+			/*background: #f9f9f9;*/
+			width: 100%;
+			height: 100%;
+		}
+		.overlay {
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+  				position: fixed;
+  				z-index: 99990;
+		}
+		.hide {
+			display: none;
+		}
+		header {
+			top: 0;
+		}
+		footer {
+			bottom: 0;
+		}
+		.mast {
+			width: 100%;
+			z-index: 500;
+			font-size: 14px;
+			background: #fff;
+			color: rgba(0,0,0,0.3);
+			letter-spacing: -0.02em;
+		 	font-weight: 400;
+		 	font-style: normal;
+		 	box-sizing: border-box;
+		 	transition: 200ms background-color,200ms color;
+		 	-webkit-animation: fade-up-in 175ms;
+  			animation: fade-up-in 175ms;
+  			padding: 0 10px 0 16px;
+  			position: fixed;
+			height: 50px;
+			box-shadow: 0 0 1px rgba(0,0,0,0.15);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="overlay hide"></div>
+		<header class="mast"></header>
+		<div class="content"></div>
+		<footer class="mast"></footer>
+	</div>
+</body>
 </html>
