@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Vijay Papers</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js" aysnc></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" aysnc></script>
 	<style type="text/css">
 		* {
 		  	margin: 0;
@@ -38,9 +40,12 @@
 		}
 		header {
 			top: 0;
+			height: 4em;
+			z-index: 99990;
 		}
 		footer {
 			bottom: 0;
+			height: 3em;
 		}
 		.mast {
 			width: 100%;
@@ -55,19 +60,60 @@
 		 	transition: 200ms background-color,200ms color;
 		 	-webkit-animation: fade-up-in 175ms;
   			animation: fade-up-in 175ms;
-  			padding: 0 10px 0 16px;
+  			padding: 0 16px 0 16px;
   			position: fixed;
-			height: 50px;
 			box-shadow: 0 0 1px rgba(0,0,0,0.15);
+		}
+		.hamburger {
+			width: 25px;
+			height: 25px;
+			background: #f2f2f2;
+			position: relative;
+			left: 100%;
+			top: 50%;
+			transform: translate(-100%,-50%);
+			-webkit-transform: translate(-100%,-50%);
+			-moz-transform: translate(-100%,-50%);
+			cursor: pointer;
+			z-index: 99997;
+		}
+		.hamburger:hover {
+			background: #e4352c;
+		}
+		.contact {
+			width: 400px;
+			height: 400px;
+			margin: 4em 16px 0 0;
+			background: #bababa;
+			z-index: 99997;
+			float: right;
+		}
+		footer p {
+			line-height: 3em;
+			color: rgba(0,0,0,0.6);
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="overlay hide"></div>
-		<header class="mast"></header>
+		<!--<div class="overlay hide"></div>-->
+		<header class="mast">
+			<div class="hamburger"></div>
+		</header>
+		<div class="contact hide"></div>
 		<div class="content"></div>
-		<footer class="mast"></footer>
+		<footer class="mast">
+			<p>&copy; 2015 | Vijay Papers | All rights reserved.</p>
+		</footer>
 	</div>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".hamburger").click(function(){
+				//$(".overlay").toggleClass("hide");
+				$(".contact").toggleClass("hide");
+				console.log("clicked");
+			});
+		});
+	</script>
 </body>
 </html>
