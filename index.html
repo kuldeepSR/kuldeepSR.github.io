@@ -2,111 +2,12 @@
 <html>
 <head>
 	<title>Vijay Papers</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<script src="http://code.jquery.com/jquery-1.10.2.js" aysnc></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" aysnc></script>
 	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		/* Comman/Generic */
-		* {
-		  	margin: 0;
-		  	padding: 0;
-		  	border: none;
-		}
-		html, body {
-			height: 100%;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-family: 'Fira Sans', sans-serif;
-			background: #edecec;
-		}
-		.hide {
-			display: none;
-		}
-		.container {
-			/*background: #f9f9f9;*/
-			width: 100%;
-			height: 100%;
-		}
-		.mast {
-			width: 100%;
-			z-index: 500;
-			background: #fff;
-			font-size: 14px;
-			color: rgba(0,0,0,0.3);
-			letter-spacing: -0.02em;
-		 	font-weight: 400;
-		 	font-style: normal;
-		 	box-sizing: border-box;
-		 	transition: 200ms background-color,200ms color;
-		 	-webkit-animation: fade-up-in 175ms;
-  			animation: fade-up-in 175ms;
-  			padding: 0 16px 0 16px;
-			box-shadow: 0 0 1px rgba(0,0,0,0.15);
-		}
-		a {
-			text-decoration: none;
-		}
-		.active {
-			color: #e4352c;
-		}
-		/* Header */
-		header {
-			top: 0;
-			height: 4em;
-			position: fixed;
-		}
-		.hamburger {
-			width: 25px;
-			height: 25px;
-			background: #f2f2f2;
-			position: relative;
-			left: 100%;
-			top: 50%;
-			transform: translate(-100%,-50%);
-			-webkit-transform: translate(-100%,-50%);
-			-moz-transform: translate(-100%,-50%);
-			cursor: pointer;
-			z-index: 99997;
-		}
-		.hamburger:hover {
-			background: #bababa;
-		}
-		.logo {
-			  height: 4em;
-			  padding: 0 16px 0 16px;
-			  width: 200px;
-			  background-color: red;
-			  float: left;
-			  margin-right: 20px;
-		}
-		.menu {
-			position: relative;
-			line-height: 4em;
-			color: #000;
-		}
-		.menu span {
-			float: left;
-			font-size: 1.3em;
-			padding: 0 40px 0 40px;
-			cursor: pointer;
-		}
-		.menu span:hover {
-			color: #e4352c;
-		}
-
-		/* Footer */	
-		footer {
-			bottom: 0;
-			height: 3em;
-			position: relative;
-		}
-		footer p {
-			line-height: 3em;
-			color: rgba(0,0,0,0.6);
-		}
-
 		/* Contact */
 		.contact {
 			width: 25em;
@@ -117,6 +18,7 @@
 			right: 0;
 			position: fixed;
 		}
+		/*
 		.contact .details {
 			width: 100%;
 			height: 100%;
@@ -134,74 +36,70 @@
 		}
 		textarea {
 			resize: none;
-		}
-
-		/* Content */
-		section {
-			width: 100%;
-			position: relative;
-		}
-		.about {
-			background: #DDDAD2;
-			color: #f2f2f2;
-			height: 32em;
-		}
-		.products {
-			background: #383735;
-			color: #f2f2f2;
-			height: 32em;
-		}
+		}*/
 	</style>
 </head>
 <body>
 	<div class="container">
 		<header class="mast">
-			<div class="logo"></div>
+			<div class="logo animated hide">
+				<img src="logo.png" height="60" width="60">
+			</div>
+			<div class="hamburger">
+			</div>
 			<div class="menu">
 				<span class="mAbout active">About</span>
 				<span class="mProducts">Products</span>
 			</div>
-			<div class="hamburger"></div>
 		</header>
 		<div class="contact animated hide">
-			<!-- <div class="details">
-				<h3>Contact</h3>
-				<form method="post">
-					<div class="form-row">
-						<label>Name *</label> <br/>
-						<input type="text" name="name" required />
-					</div>
-					<div class="form-row">
-						<label>Email *</label> <br/>
-						<input type="email" name="email" required />
-					</div>
-					<div class="form-row">
-						<label>Message *</label> <br/>
-						<textarea name="message" cols="40" rows="10"></textarea>
-					</div>
-					<div class="form-row">
-						<label>We need to verify you are human * <br/>How much is 3 + 5 ?</label>
-						<input type="number" name="human" />
-					</div>
-				</form>
-			</div> -->
+			
 		</div>
 		<div class="content">
 			<section class="about">
-				
+				<h1>Vijay Papers</h1>
+				<h2>Paper Products Wholesaler</h2>
+				<div class="process">
+					
+				</div>
 			</section>
 			<section class="products">
-				<div class="paper"></div>
-				<div class="board"></div>
+				<div class="section-content">
+					<div class="sub-section" id="paper">
+						<h2>Paper</h2>
+					</div>
+					<div class="sub-section" id="board">
+						<h2>Board</h2>
+					</div>
+				</div>
 			</section>
 		</div>
 		<footer class="mast">
-			<p>&copy; 2015 | Vijay Papers | All rights reserved.</p>
+			<p style="float:left;">&copy; 2015 | Vijay Papers | All rights reserved.</p>
+			<p style="float:right;">Shop No. #148, Sultanpete Main Rd, Sultanpete, Bengaluru - 560053, Karnataka, India</span></p>
 		</footer>
 	</div>
 	<script type="text/javascript">
 		$(window).load(function() {
 			var clicked = 0;
+			$(window).on("scroll touchmove", function () {
+				$('header .logo').removeClass('hide');
+				if($(document).scrollTop() == 0){
+					$('header .logo').removeClass("fadeInDown");
+					$('header .logo').addClass("fadeOutUp");
+					$(".menu .mProducts").removeClass("active");
+					$(".menu .mAbout").addClass("active");
+				}
+				else if($(document).scrollTop() >= $(".content .products").position().top){
+					$(".menu .mProducts").addClass("active");
+					$(".menu .mAbout").removeClass("active");
+					console.log("Hey");
+				}
+				else{
+					$('header .logo').removeClass("fadeOutUp");
+				    $('header .logo').addClass("fadeInDown");
+				}	
+			});
 			$(".hamburger").click(function(){
 				$(".contact").removeClass("hide");
 				if(clicked == 0){
